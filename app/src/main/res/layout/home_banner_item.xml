@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    app:cardCornerRadius="@dimen/_10sdp"
+
+    app:cardElevation="@dimen/_2sdp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_4sdp"
+
+        >
+
+        <Button
+            android:id="@+id/learnMore"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:paddingVertical="@dimen/_3sdp"
+            android:text="Learn More" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|start|top"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:gravity="center|start|top"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_3sdp"
+                    android:text="@string/is_marquee_available_at_your_event_schedule"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/descriptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:padding="@dimen/_3sdp"
+                    android:singleLine="false"
+                    android:text="@string/details_card"
+
+                    android:textSize="@dimen/_10sdp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                app:cardCornerRadius="@dimen/_16sdp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:src="@drawable/i1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

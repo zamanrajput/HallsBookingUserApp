@@ -1,0 +1,38 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="@dimen/_20sdp"
+    android:layout_marginTop="@dimen/_4sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:text="Parking Capacity"
+        android:id="@+id/name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/value"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:fontFamily="@font/nunito_sans_light"
+        android:paddingBottom="@dimen/_2sdp"
+        android:text="1000 vehicles"
+        android:textColor="#999"
+        android:textSize="@dimen/_11sdp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey" />
+
+</RelativeLayout>

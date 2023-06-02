@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="@dimen/_12sdp"
+    android:scrollbars="none"
+    tools:context="com.rsp.hbm.Fragments.MapFragment">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_44sdp"
+            android:textColorHint="#999999"
+            app:boxBackgroundColor="@color/white"
+
+            app:boxCornerRadiusBottomEnd="@dimen/_26sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_26sdp"
+
+            app:boxCornerRadiusTopEnd="@dimen/_26sdp"
+            app:boxCornerRadiusTopStart="@dimen/_26sdp"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_1sdp"
+                android:drawableStart="@drawable/search_ic_black"
+                android:drawableTint="#999"
+
+                android:elevation="@dimen/_1sdp"
+                android:fontFamily="@font/nunito_sans_light"
+                android:hint="Search"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_3sdp"
+                android:textSize="@dimen/_12sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regions"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/nunito_sans_light"
+                    android:text="View All"
+                    android:textColor="@color/primary" />
+            </RelativeLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:checkedButton="@id/id1"
+                android:orientation="horizontal">
+
+                <RadioButton
+
+                    android:id="@+id/id1"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:background="@drawable/radio_btn_selector"
+
+                    android:button="@null"
+                    android:elevation="@dimen/_3sdp"
+                    android:fontFamily="@font/nunito_sans"
+                    android:gravity="center"
+                    android:text="Shahdara"
+                    android:textColor="@color/radio_btn_color_selector"
+                    android:textSize="@dimen/_14sdp" />
+
+                <RadioButton
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:background="@drawable/radio_btn_selector"
+                    android:button="@null"
+                    android:elevation="@dimen/_2sdp"
+                    android:fontFamily="@font/nunito_sans"
+                    android:gravity="center"
+                    android:text="Faizpur"
+                    android:textColor="@color/radio_btn_color_selector"
+                    android:textSize="@dimen/_14sdp" />
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recomended"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/nunito_sans_light"
+                    android:text="View All"
+                    android:textColor="@color/primary" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/recomendedRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/hall_rec_item_full" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trending"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/nunito_sans_light"
+                    android:text="View All"
+                    android:textColor="@color/primary" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trendingRecView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/hall_rec_item_full" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_85sdp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Halls Booking</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="details_card"><![CDATA[Now you can Check Halls Availability for Booking through this <app-name> easily with just in few taps]]></string>
+    <string name="is_marquee_available_at_your_event_schedule">Is Marquee Available at your event schedule?</string>
+</resources>

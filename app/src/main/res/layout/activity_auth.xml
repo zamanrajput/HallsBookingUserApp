@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screens_bg_color"
+    android:orientation="vertical"
+    tools:context="com.rsp.hbm.AuthActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp"
+        android:background="@color/primary" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_26sdp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_14sdp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_3sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_bar_grey" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="setLogin">
+
+                <TextView
+                    android:id="@+id/loginText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Login"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/_13sdp" />
+
+                <View
+                    android:id="@+id/loginBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/bg_bar_selected" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="setRegister">
+
+                <TextView
+                    android:id="@+id/registerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/nunito_sans"
+                    android:text="Sign Up"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+
+                <View
+                    android:id="@+id/registerBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:paddingTop="@dimen/_14sdp" />
+</LinearLayout>
